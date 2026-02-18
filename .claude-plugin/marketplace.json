@@ -7,7 +7,7 @@
   },
   "plugins": [
     {
-      "name": "codex",
+      "name": "claudex",
       "description": "Give Claude Code a Codex-powered teammate. Two AI architectures collaborate on planning, red-teaming, debugging, verification, and more.",
       "category": "development",
       "source": {
