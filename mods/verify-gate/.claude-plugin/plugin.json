@@ -1,0 +1,12 @@
+{
+  "name": "verify-gate",
+  "version": "0.1.0",
+  "description": "When a turn changes code, runs the project's own lint and tests; failures go straight back to Claude (up to a retry limit), so done means green.",
+  "author": { "name": "Omri Tal" },
+  "userConfig": {
+    "checkCommand": { "type": "string", "title": "Check command", "description": "Shell command to run instead of the detected checks (e.g. `make check`). Empty: detect ruff/pytest or package.json scripts.", "default": "" },
+    "runTests": { "type": "boolean", "title": "Run tests too", "description": "Off runs lint and typecheck only.", "default": true },
+    "maxRetries": { "type": "number", "title": "Automatic retries", "description": "How many times a failure is sent back to Claude before handing over to you (0-5).", "default": 2 },
+    "timeoutSeconds": { "type": "number", "title": "Timeout per check (seconds)", "description": "30-600.", "default": 300 }
+  }
+}

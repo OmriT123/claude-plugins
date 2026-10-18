@@ -1,0 +1,12 @@
+{
+  "name": "billing",
+  "version": "0.1.0",
+  "description": "/clock times work per client, /bill turns unbilled time into an exact amount (whole agorot, stated rounding, excl. VAT) and, on confirm, has Claude record it in Shared Memory. Rates stay on this machine.",
+  "author": { "name": "Omri Tal" },
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "incrementMinutes": { "type": "number", "title": "Billing increment (minutes)", "description": "Billed time is rounded to this increment.", "default": 30 },
+    "rounding": { "type": "string", "title": "Rounding", "description": "How billed time is rounded to the increment.", "options": ["nearest", "up", "none"], "default": "nearest" },
+    "currency": { "type": "string", "title": "Currency label", "description": "Shown after amounts.", "default": "NIS" }
+  }
+}

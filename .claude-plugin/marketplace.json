@@ -15,6 +15,41 @@
         "url": "https://github.com/OmriT123/Claudex.git"
       },
       "homepage": "https://github.com/OmriT123/Claudex"
+    },
+    {
+      "name": "guardrail",
+      "description": "Redacts secrets before Claude reads them, keeps confidential and personal data away from Codex, holds sends/deploys/orders/destructive commands for your yes, and refuses to commit secrets.",
+      "version": "0.1.0",
+      "source": "./mods/guardrail",
+      "category": "security"
+    },
+    {
+      "name": "verify-gate",
+      "description": "When a turn changes code, runs the project's own lint and tests; failures go straight back to Claude (up to a retry limit), so done means green.",
+      "version": "0.1.0",
+      "source": "./mods/verify-gate",
+      "category": "development"
+    },
+    {
+      "name": "push-gate",
+      "description": "Holds a push or PR that is large or touches sensitive code until Codex has reviewed that exact content, holds merges on red CI, and shows running Codex reviews on the status line.",
+      "version": "0.1.0",
+      "source": "./mods/push-gate",
+      "category": "development"
+    },
+    {
+      "name": "resume",
+      "description": "/park saves where you left off (locally and as a Shared Memory checkpoint), /where tells you where you were, the next session opens with a reminder, and long turns notify you when they finish.",
+      "version": "0.1.0",
+      "source": "./mods/resume",
+      "category": "productivity"
+    },
+    {
+      "name": "billing",
+      "description": "/clock times work per client, /bill turns unbilled time into an exact amount (whole agorot, stated rounding, excl. VAT) and, on confirm, has Claude record it in Shared Memory. Rates stay on this machine.",
+      "version": "0.1.0",
+      "source": "./mods/billing",
+      "category": "productivity"
     }
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "name": "resume",
+  "version": "0.1.0",
+  "description": "/park saves where you left off (locally and as a Shared Memory checkpoint), /where tells you where you were, the next session opens with a reminder, and long turns notify you when they finish.",
+  "author": { "name": "Omri Tal" },
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "notifyAfterSeconds": { "type": "number", "title": "Notify after (seconds)", "description": "A turn at least this long sends a notification when it ends.", "default": 90 }
+  }
+}

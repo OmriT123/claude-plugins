@@ -1,0 +1,11 @@
+{
+  "name": "push-gate",
+  "version": "0.1.0",
+  "description": "Holds a push or PR that is large or touches sensitive code until Codex has reviewed that exact content, holds merges on red CI, and shows running Codex reviews on the status line.",
+  "author": { "name": "Omri Tal" },
+  "userConfig": {
+    "minLines": { "type": "number", "title": "Review threshold (changed lines)", "description": "A push with at least this many changed lines needs a Codex review.", "default": 100 },
+    "followUpLines": { "type": "number", "title": "Follow-up allowance (lines)", "description": "Fixes after a review smaller than this, touching nothing sensitive, don't need another review.", "default": 40 },
+    "sensitivePaths": { "type": "string", "title": "Extra sensitive paths", "description": "Regexes, comma-separated, for paths that always need a review (auth, migrations and schema already do).", "default": "" }
+  }
+}

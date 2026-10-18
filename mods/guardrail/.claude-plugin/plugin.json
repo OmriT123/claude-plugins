@@ -1,0 +1,16 @@
+{
+  "name": "guardrail",
+  "version": "0.1.0",
+  "description": "Redacts secrets before Claude reads them, keeps confidential and personal data away from Codex, holds sends/deploys/orders/destructive commands for your yes, and refuses to commit secrets.",
+  "author": { "name": "Omri Tal" },
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "confidentialTerms": { "type": "string", "title": "Confidential terms", "description": "Client names and other terms that must never reach Codex, comma-separated.", "sensitive": true, "default": "" },
+    "extraSecretPatterns": { "type": "string", "title": "Extra secret patterns", "description": "Regexes for secrets the built-in shapes miss, comma- or newline-separated.", "sensitive": true, "default": "" },
+    "extraNeverCommit": { "type": "string", "title": "Extra never-commit paths", "description": "Regexes for paths that must never be committed, comma-separated.", "default": "" },
+    "holdTools": { "type": "string", "title": "Also hold these tools", "description": "Regexes for tool names to hold, comma-separated.", "default": "" },
+    "allowTools": { "type": "string", "title": "Never hold these tools", "description": "Regexes for connector tools never to hold, comma-separated.", "default": "" },
+    "scanPii": { "type": "boolean", "title": "Scan Codex calls for personal data", "description": "Emails, Israeli phone numbers and card numbers.", "default": true },
+    "redactTranscript": { "type": "boolean", "title": "Redact secrets from what Claude reads", "description": "Replaces secrets with placeholders; local tools get the real values back.", "default": true }
+  }
+}
